@@ -1,0 +1,32 @@
+A set of numbers is said to satisfy Benford's law if the leading digit d (d ∈ {1, ..., 9}) occurs with probability
+
+{\displaystyle P(d)=\log _{10}(d+1)-\log _{10}(d)=\log _{10}\left({\frac {d+1}{d}}\right)=\log _{10}\left(1+{\frac {1}{d}}\right)}{\displaystyle P(d)=\log _{10}(d+1)-\log _{10}(d)=\log _{10}\left({\frac {d+1}{d}}\right)=\log _{10}\left(1+{\frac {1}{d}}\right)}
+
+
+The quantity {\displaystyle P(d)}{\displaystyle P(d)} is proportional to the space between d and d + 1 on a logarithmic scale. Therefore, this is the distribution expected if the mantissae of the logarithms of the numbers (but not the numbers themselves) are uniformly and randomly distributed.
+
+For example, a number x, constrained to lie between 1 and 10, starts with the digit 1 if 1 ≤ x < 2, and starts with the digit 9 if 9 ≤ x < 10. Therefore, x starts with the digit 1 if log 1 ≤ log  x < log 2, or starts with 9 if log 9 ≤ log x < log 10. The interval [log 1, log 2] is much wider than the interval [log 9, log 10] (0.30 and 0.05 respectively); therefore if log x is uniformly and randomly distributed, it is much more likely to fall into the wider interval than the narrower interval, i.e. more likely to start with 1 than with 9; the probabilities are proportional to the interval widths, giving the equation above (as well as the generalization to other bases besides decimal).
+
+Benford's law is sometimes stated in a stronger form, asserting that the fractional part of the logarithm of data is typically close to uniformly distributed between 0 and 1; from this, the main claim about the distribution of first digits can be derived.
+
+
+Multiplicative fluctuations
+Many real-world examples of Benford's law arise from multiplicative fluctuations.[13] For example, if a stock price starts at $100, and then each day it gets multiplied by a randomly chosen factor between 0.99 and 1.01, then over an extended period the probability distribution of its price satisfies Benford's law with higher and higher accuracy.
+
+The reason is that the logarithm of the stock price is undergoing a random walk, so over time its probability distribution will get more and more broad and smooth (see above).[13] (More technically, the central limit theorem says that multiplying more and more random variables will create a log-normal distribution with larger and larger variance, so eventually it covers many orders of magnitude almost uniformly.) To be sure of approximate agreement with Benford's Law, the distribution has to be approximately invariant when scaled up by any factor up to 10; a lognormally distributed data set with wide dispersion would have this approximate property.
+
+Unlike multiplicative fluctuations, additive fluctuations do not lead to Benford's law: They lead instead to normal probability distributions (again by the central limit theorem), which do not satisfy Benford's law. For example, the "number of heartbeats that I experience on a given day" can be written as the sum of many random variables (e.g. the sum of heartbeats per minute over all the minutes of the day), so this quantity is unlikely to follow Benford's law. By contrast, that hypothetical stock price described above can be written as the product of many random variables (i.e. the price change factor for each day), so is likely to follow Benford's law quite well.
+
+Multiple probability distributions
+Formann provided an alternative explanation by directing attention to the interrelation between the distribution of the significant digits and the distribution of the observed variable. He showed in a simulation study that long right-tailed distributions of a random variable are compatible with the Newcomb–Benford law, and that for distributions of the ratio of two random variables the fit generally improves.[14] For numbers drawn from certain distributions (IQ scores, human heights) the Law fails to hold because these variates obey a normal distribution which is known not to satisfy Benford's law,[6] since normal distributions can't span several orders of magnitude and the mantissae of their logarithms will not be (even approximately) uniformly distributed. However, if one "mixes" numbers from those distributions, for example by taking numbers from newspaper articles, Benford's law reappears. This can also be proven mathematically: if one repeatedly "randomly" chooses a probability distribution (from an uncorrelated set) and then randomly chooses a number according to that distribution, the resulting list of numbers will obey Benford's Law.[8][15] A similar probabilistic explanation for the appearance of Benford's Law in everyday-life numbers has been advanced by showing that it arises naturally when one considers mixtures of uniform distributions.[16]
+
+Scale invariance
+If there is a list of lengths, the distribution of first digits of numbers in the list may be generally similar regardless of whether all the lengths are expressed in metres, or yards, or feet, or inches, etc.
+
+This is not always the case. For example, the height of adult humans almost always starts with a 1 or 2 when measured in meters, and almost always starts with 4, 5, 6, or 7 when measured in feet.
+
+But consider a list of lengths that is spread evenly over many orders of magnitude. For example, a list of 1000 lengths mentioned in scientific papers will include the measurements of molecules, bacteria, plants, and galaxies. If one writes all those lengths in meters, or writes them all in feet, it is reasonable to expect that the distribution of first digits should be the same on the two lists.
+
+In these situations, where the distribution of first digits of a data set is scale invariant (or independent of the units that the data are expressed in), the distribution of first digits is always given by Benford's Law.[17][18]
+
+For example, the first (non-zero) digit on this list of lengths should have the same distribution whether the unit of measurement is feet or yards. But there are three feet in a yard, so the probability that the first digit of a length in yards is 1 must be the same as the probability that the first digit of a length in feet is 3, 4, or 5; similarly the probability that the first digit of a length in yards is 2 must be the same as the probability that the first digit of a length in feet is 6, 7, or 8. Applying this to all possible measurement scales gives the logarithmic distribution of Benford's law.
